@@ -27,9 +27,9 @@ const discription = document.getElementById("discription")
 document.addEventListener("mousemove", (e) => {
     setTimeout(function () {
         point.style.position = "absolute"
-        point.style.top = e.pageY - 30 + "px"
-        point.style.left = e.pageX - 30 + "px"
-    }, 150)
+        point.style.top = e.pageY - 0 + "px"
+        point.style.left = e.pageX - 0 + "px"
+    }, 10)
 })
 firstcontener.addEventListener("mouseover", function () {
     description.style.display = "block";
