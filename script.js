@@ -2,34 +2,14 @@ const point = document.getElementById("point")
 const logo = document.getElementById("logo")
 const firstcontener = document.getElementById("firstcontener")
 const discription = document.getElementById("discription")
-// point.style.top = event.
-// point.style.left = "150px"
-// const rect = point.getBoundingClientRect()
-// const position  = {
-//     top : rect.top,
-//     left : rect.left,
-//     right : rect.right,
-//     bottom : rect.bottom 
-// }
-// console.log(position)
-// document.addEventListener("mousemove",(e) => {
-//     console.log(e.pageX)
-//     console.log(e.pageY)
-// })
-// document.point.style.top = ""+46+"px"
-// document.point.style.left = ""+46+"px"
-
-// point.style.position = 'absolute';
-// point.style.top = '15px';
-// point.style.left = '150px';
 
 
 document.addEventListener("mousemove", (e) => {
     setTimeout(function () {
         point.style.position = "absolute"
-        point.style.top = e.pageY - 0 + "px"
-        point.style.left = e.pageX - 0 + "px"
-    }, 10)
+        point.style.top = e.pageY - 4 + "px"
+        point.style.left = e.pageX - 4 + "px"
+    }, 90)
 })
 firstcontener.addEventListener("mouseover", function () {
     description.style.display = "block";
@@ -41,7 +21,7 @@ const logoimgright = document.getElementById("logoimgleft");
 const logoimgleft = document.getElementById("logoimgright");
 const c = document.getElementById("c");
 
-const language = ["C Language", "C++", "Java", "HTML", "CSS", "Java Script"];
+const language = ["C Lang", "C++", "Java", "HTML", "CSS", "Java Script"];
 let index = 0;
 
 // Initial state
@@ -148,4 +128,53 @@ As I progressed, I explored the Document Object Model (DOM), event handling, and
     }
 
 }
+// 🌗 Theme toggle button
+const themeToggle = document.getElementById("theme-toggle");
+let isLight = false;
+
+// Load previously saved mode
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  themeToggle.textContent = "🌞";
+  isLight = true;
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+  isLight = !isLight;
+
+  // Change icon
+  themeToggle.textContent = isLight ? "🌞" : "🌙";
+
+  // Save preference
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
+// Initialize EmailJS
+(function() {
+    emailjs.init("uBxfBAejxviA4yDMT"); // 🔹 Replace with your EmailJS Public Key
+})();
+
+const contactForm = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  emailjs.send("service_gru41or", "template_v7uzjmi", {
+      name: name,
+      email: email,
+      message: message
+  })
+  .then(() => {
+      status.textContent = "✅ Message Sent Successfully!";
+      contactForm.reset();
+  }, (error) => {
+      console.error("Error:", error);
+      status.textContent = "❌ Failed to send message. Please try again.";
+  });
+});
 
