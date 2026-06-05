@@ -3,99 +3,699 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khushal’s Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Khushal Mahajan | Aspiring Full-Stack Developer & Laravel Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Khushal Mahajan, an aspiring Full-Stack Developer, Laravel developer, and Computer Engineering student. Explore web development projects, skills, and internships.">
+  <meta name="keywords" content="Khushal Mahajan, Web Developer, Laravel, PHP, MySQL, Portfolio, B.Tech, Computer Engineering, Calibar, Nashik, Full-Stack Developer">
+  <meta name="author" content="Khushal Mahajan">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Khushal Mahajan | Aspiring Full-Stack Developer">
+  <meta property="og:description" content="Explore Khushal Mahajan's personal portfolio featuring full-stack projects, Laravel experience, and B.Tech academic details.">
+  <meta property="og:image" content="profile2.jpg">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="profile2.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="point"></div>
-  
-  <header id="firstcontener">
-    <div class="left">
-      <h1 id="logo">Khushal’s Portfolio</h1>
-      <!-- <p id="description">“Hi! I’m Khushal — a web developer passionate about coding and creativity. Explore my projects below.”</p> -->
-    </div>
-    <button id="theme-toggle">🌙</button>
 
+  <!-- Smooth Neon Follower Cursor -->
+  <div id="point"></div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">KM</div>
+        <span>Khushal.</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#foundations" class="nav-link">Foundations</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#timeline" class="nav-link">Academic</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle light/dark theme">🌙</button>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <nav id="nav">
-    <a href="mailto:khushalmhajan303@gmail.com" target="_blank"><img src="gmail.jpg" alt="gmail"></a>
-    <a href="https://www.linkedin.com/in/khushal-mahajan-6a93652b5/" target="_blank"><img src="linkedin.jpg" alt="linkedin"></a>
-    <a href="https://leetcode.com/u/khushal_mahajan/" target="_blank"><img src="leetcode.jpg" alt="leetcode"></a>
-    <a href="https://github.com/KHUSHALMAHAJAN" target="_blank"><img src="github.webp" alt="github"></a>
-    <a href="https://www.instagram.com/khushal_kunal_mm/" target="_blank"><img src="instagram.jpg" alt="instagram"></a>
-  </nav>
-
-  <section id="third">Hi, I’m <span class="highlight">Khushal</span> 👋</section>
-
-  <section id="forth">
-    <p>“I am currently pursuing a B.Tech in Computer Engineering. I previously completed a Diploma in Computer Technology under MSBTE, where I learned C, C++, and Java. Over time, I have explored web development technologies such as HTML, CSS, JavaScript, PHP, and Python, and have built several very interesting projects. This portfolio showcases my learning journey, skills, and projects.”</p>
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <div class="hero-tag">
+          <i class="fa-solid fa-location-dot"></i> Nashik, India
+        </div>
+        <h1 class="hero-title">Hi, I'm <br><span class="text-gradient">Khushal Mahajan</span></h1>
+        
+        <div class="hero-typing">
+          I am a <span id="typewriter-text"></span><span class="cursor-blink">|</span>
+        </div>
+        
+        <p class="hero-desc">
+          Aspiring Full-Stack Developer passionate about creating efficient, scalable, and user-friendly web applications. B.Tech Computer Engineering student with hands-on experience in building complex Laravel environments.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        
+        <div class="social-links">
+          <a href="mailto:khushalmhajan303@gmail.com" class="social-icon" target="_blank" aria-label="Email Address">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/khushal-mahajan-6a93652b5/" class="social-icon" target="_blank" aria-label="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/KHUSHALMAHAJAN" class="social-icon" target="_blank" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://leetcode.com/u/khushal_mahajan/" class="social-icon" target="_blank" aria-label="LeetCode Profile">
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="https://www.instagram.com/khushal_kunal_mm/" class="social-icon" target="_blank" aria-label="Instagram Profile">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal">
+        <div class="image-frame">
+          <img src="profile2.jpg" alt="Khushal Mahajan Portrait">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="information">
-    <img id="logoimgleft" src="left-arrow.png" alt="left-arrow">
-    <div id="c">C language</div>
-    <div id="line"></div>
-    <div id="infor"></div>
-    <img id="logoimgright" src="right-arrow.png" alt="right-arrow">
+  <!-- About Me Section -->
+  <section class="about-section" id="about">
+    <div class="section-header reveal">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">A glimpse into who I am, my core aspirations, and what drives me as a software developer.</p>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-story glass-panel padding-wrapper reveal" style="padding: 40px;">
+        <h3>My Story</h3>
+        <p>
+          Hello! I'm Khushal Mahajan, a passionate Computer Engineering student with a strong focus on Full-Stack Web Development. I enjoy building modern, responsive, and user-friendly web applications that solve real problems.
+        </p>
+        <p>
+          I continuously refine my engineering capabilities through hands-on project creation, structured Data Structures & Algorithms training, and practical corporate internship opportunities.
+        </p>
+        
+        <div class="career-objective-box">
+          <strong>Career Objective:</strong> "To secure a challenging position as a Full-Stack Developer where I can apply my technical knowledge, problem-solving abilities, and web development skills to build impactful software solutions while continuously growing professionally."
+        </div>
+        
+        <h4 class="hobbies-title">Hobbies & Interests</h4>
+        <div class="hobbies-grid">
+          <span class="hobby-tag"><i class="fa-solid fa-keyboard"></i> Coding</span>
+          <span class="hobby-tag"><i class="fa-solid fa-globe"></i> Web Dev</span>
+          <span class="hobby-tag"><i class="fa-solid fa-microchip"></i> Learning Tech</span>
+          <span class="hobby-tag"><i class="fa-solid fa-brain"></i> Problem Solving</span>
+          <span class="hobby-tag"><i class="fa-solid fa-compass"></i> Frameworks</span>
+          <span class="hobby-tag"><i class="fa-solid fa-chess-knight"></i> Chess</span>
+        </div>
+      </div>
+      
+      <div class="strengths-container reveal">
+        <h3>My Strengths</h3>
+        
+        <div class="strength-card glass-panel">
+          <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div>
+            <h4>Quick Learner</h4>
+            <p>Eager to adopt new modern tech stacks, libraries, and industrial workflows seamlessly.</p>
+          </div>
+        </div>
+        
+        <div class="strength-card glass-panel">
+          <div class="strength-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+          <div>
+            <h4>Problem Solver</h4>
+            <p>Analytical approach to bugs and system design, using computational concepts efficiently.</p>
+          </div>
+        </div>
+        
+        <div class="strength-card glass-panel">
+          <div class="strength-icon"><i class="fa-solid fa-users"></i></div>
+          <div>
+            <h4>Team Player</h4>
+            <p>Empathetic communicator who values collaboration, clear versioning, and shared success.</p>
+          </div>
+        </div>
+        
+        <div class="strength-card glass-panel">
+          <div class="strength-icon"><i class="fa-solid fa-fire"></i></div>
+          <div>
+            <h4>Self-Motivated</h4>
+            <p>Committed to consistent code contributions, personal milestones, and continuous coding updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="photo">
-    <div class="card">
-      <img src="github.jpeg" alt="GitHub">
-      <p>GitHub helps developers collaborate and manage code versions using Git. It’s an essential platform for open-source and professional projects.</p>
+  <!-- Core Foundations / Languages Section -->
+  <section class="foundations-section" id="foundations">
+    <div class="section-header reveal">
+      <h2 class="section-title">Core Foundations</h2>
+      <p class="section-subtitle">How I started programming and evolved my skills across different languages.</p>
     </div>
-    <div class="card">
-      <img src="leetcode.jpeg" alt="LeetCode">
-      <p>LeetCode improves coding skills and prepares you for technical interviews through challenging problems in algorithms and data structures.</p>
-    </div>
-    <div class="card">
-      <img src="linkedin.jpeg" alt="LinkedIn">
-      <p>LinkedIn is a professional platform to build your career network, showcase your skills, and find job opportunities.</p>
+    
+    <div class="foundations-container reveal">
+      <div class="foundations-card glass-panel">
+        <div class="foundations-navigation">
+          <button class="nav-arrow-btn" id="lang-prev" aria-label="Previous Language">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="foundations-active-indicator">
+            <span class="active-lang-badge" id="lang-title">C Lang</span>
+            <div class="lang-dots" id="lang-dots">
+              <!-- Dot indicators will be generated dynamically -->
+            </div>
+          </div>
+          
+          <button class="nav-arrow-btn" id="lang-next" aria-label="Next Language">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="foundations-content">
+          <div class="lang-icon-display" id="lang-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="lang-description-wrapper">
+            <p id="lang-desc" class="lang-desc-text">
+              <!-- Description will be inserted dynamically -->
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+  <!-- Technical Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="section-header reveal">
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-subtitle">The tools, languages, and frameworks that I leverage to build scalable and optimized web services.</p>
+    </div>
+    
+    <div class="skills-container reveal">
+      <!-- Frontend Development -->
+      <div class="skills-category-group">
+        <h3 class="skills-category-heading">
+          <i class="fa-solid fa-laptop-code"></i> Frontend Development
+        </h3>
+        <div class="skills-cards-grid">
+          <!-- HTML/CSS Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-html5"></i></div>
+              <h4 class="skill-card-name">HTML5 & CSS3</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+          <!-- JavaScript Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-square-js"></i></div>
+              <h4 class="skill-card-name">JavaScript (ES6+)</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+              <!-- <span class="skill-card-level">Intermediate</span> -->
+            </div>
+          </div>
+          <!-- Bootstrap Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-bootstrap"></i></div>
+              <h4 class="skill-card-name">Bootstrap</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+          <!-- Responsive Web Design Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h4 class="skill-card-name">Responsive Web Design</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Backend & Database -->
+      <div class="skills-category-group">
+        <h3 class="skills-category-heading">
+          <i class="fa-solid fa-server"></i> Backend & Database
+        </h3>
+        <div class="skills-cards-grid">
+          <!-- PHP Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-php"></i></div>
+              <h4 class="skill-card-name">PHP OOP</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+          <!-- Laravel Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-laravel"></i></div>
+              <h4 class="skill-card-name">Laravel Framework</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+              <!-- <span class="skill-card-level">Intermediate</span> -->
+            </div>
+          </div>
+          <!-- MySQL Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-database"></i></div>
+              <h4 class="skill-card-name">MySQL Database</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+              <!-- <span class="skill-card-level">Intermediate</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Developer Tools & Tech -->
+      <div class="skills-category-group">
+        <h3 class="skills-category-heading">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools & Tech
+        </h3>
+        <div class="skills-cards-grid">
+          <!-- Git & GitHub Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-github"></i></div>
+              <h4 class="skill-card-name">Git & GitHub</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+          <!-- VS Code / XAMPP Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <h4 class="skill-card-name">VS Code / XAMPP</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              <!-- <span class="skill-card-level">Advanced</span> -->
+            </div>
+          </div>
+          <!-- Node.js Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-node-js"></i></div>
+              <h4 class="skill-card-name">Node.js</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="50%"></div></div>
+              <!-- <span class="skill-card-level">Basic</span> -->
+            </div>
+          </div>
+          <!-- Python Card -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-brands fa-python"></i></div>
+              <h4 class="skill-card-name">Python</h4>
+            </div>
+            <div class="skill-card-body">
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60%"></div></div>
+              <!-- <span class="skill-card-level">Basic</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="section-header reveal">
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">Real-world software development internships and corporate training contributions.</p>
+    </div>
+    
+    <div class="experience-container reveal">
+      <!-- Internship 1: Uttintra Services LLP -->
+      <div class="experience-card glass-panel">
+        <div class="experience-card-header">
+          <div class="exp-role-company">
+            <h3 class="exp-role">Web Developer Intern</h3>
+            <span class="exp-company">Uttintra Services LLP &bull; Nashik, Maharashtra</span>
+          </div>
+          <span class="exp-date">Jan 2025 &ndash; Jun 2025</span>
+        </div>
+        
+        <div class="experience-card-body">
+          <ul class="experience-list">
+            <li>Developed a comprehensive Event Management System using the Laravel Framework and MySQL, implementing user registration, event creation, participant and organizer management, secure authentication, and CRUD operations while designing responsive interfaces with HTML5, CSS3, Bootstrap, and JavaScript.</li>
+            <li>Optimized database queries and application performance using Laravel Eloquent ORM, and collaborated with team members to test, debug, and deploy features while following MVC architecture principles.</li>
+          </ul>
+          
+          <div class="exp-tech-tags">
+            <span class="tech-badge">Laravel</span>
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">Bootstrap</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Internship 2: Caliber Infotech Solution -->
+      <div class="experience-card glass-panel">
+        <div class="experience-card-header">
+          <div class="exp-role-company">
+            <h3 class="exp-role">Web Developer Intern</h3>
+            <span class="exp-company">Caliber Infotech Solution &bull; Nashik, Maharashtra</span>
+          </div>
+          <span class="exp-date">May 2024 &ndash; Jun 2024</span>
+        </div>
+        
+        <div class="experience-card-body">
+          <ul class="experience-list">
+            <li>Contributed to the development of an Internal Management System using PHP and MySQL, automating employee attendance tracking and developing optimized CRUD modules for efficient database record management.</li>
+            <li>Integrated JavaScript form validation and enhanced UI responsiveness using CSS3 and Bootstrap, while collaborating on relational database design and optimized SQL queries to improve data integrity, retrieval speed, and overall system efficiency.</li>
+          </ul>
+          
+          <div class="exp-tech-tags">
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey / Timeline Section -->
+  <section class="timeline-section" id="timeline">
+    <div class="section-header reveal">
+      <h2 class="section-title">Academic & Professional Timeline</h2>
+      <p class="section-subtitle">My milestones in computer engineering and full-stack software development.</p>
+    </div>
+    
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+      
+      <!-- Timeline Item 1: B.Tech -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content-wrapper">
+          <div class="timeline-card glass-panel">
+            <span class="timeline-date">2025 - Present</span>
+            <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="timeline-subtitle">Computer Engineering</h4>
+            <p class="timeline-desc">
+              Currently pursuing my degree at Dr. Babasaheb Ambedkar Technological University (Second Year). Deepening understanding of database architectures, theory of computation, operating systems, and advanced data structures.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 3: Diploma -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content-wrapper">
+          <div class="timeline-card glass-panel">
+            <span class="timeline-date">2022 - 2025</span>
+            <h3 class="timeline-title">Diploma in Computer Engineering</h3>
+            <p class="timeline-desc">
+              Gained fundamental grounding in software systems, systems analysis, and object-oriented paradigms. Developed foundational projects in C, C++, and Java.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 4: SSC -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content-wrapper">
+          <div class="timeline-card glass-panel">
+            <span class="timeline-date">Completed in 2022</span>
+            <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+            <p class="timeline-desc">
+              Laid strong foundational pillars in analytical mathematics and scientific subjects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="projects-container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Realized projects showcasing full-stack application development, database management, and interactive interfaces.</p>
+      </div>
+      
+      <!-- Dynamic Filter Controls -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="laravel">Laravel & PHP</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript / OOP</button>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1: Event Management System -->
+        <div class="project-card glass-panel reveal" data-category="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KHUSHALMAHAJAN" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Event Management System</h3>
+          <p class="project-desc">
+            A comprehensive, interactive web portal that simplifies registrations, organizes events, and controls participants in real-time. Created during the Calibar Internship.
+          </p>
+          <ul class="project-features">
+            <li>Secure custom user registration, login gates, and auth controls.</li>
+            <li>Dynamic Event creation pipelines and participant monitoring dashboards.</li>
+            <li>Robust database integration allowing team/group registrations.</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Laravel</span>
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Bootstrap</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+        
+        <!-- Project 2: Todo List Application -->
+        <div class="project-card glass-panel reveal" data-category="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KHUSHALMAHAJAN" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Todo List Application</h3>
+          <p class="project-desc">
+            An advanced task manager utility helping users organize daily checklists. Supports secure storage, file uploads, and status checks.
+          </p>
+          <ul class="project-features">
+            <li>Complete CRUD operations for managing simple to complex tasks.</li>
+            <li>File handling engine enabling user profile and task image uploads.</li>
+            <li>Database storage syncing state dynamically across sessions.</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Laravel</span>
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+          </div>
+        </div>
+        
+        <!-- Project 3: Internal Management System -->
+        <div class="project-card glass-panel reveal" data-category="javascript">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KHUSHALMAHAJAN" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Internal Management System</h3>
+          <p class="project-desc">
+            An administrative workflow dashboard focusing on employee hours tracking, form processing, and team coordination.
+          </p>
+          <ul class="project-features">
+            <li>Employee attendance tracking engine with check-in/out logic.</li>
+            <li>User-friendly interactive tables for reviewing records.</li>
+            <li>Data validations handling and database schema structures.</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DSA Roadmap & Achievements Section -->
+  <section class="dsa-section">
+    <div class="dsa-container">
+      <div class="dsa-content reveal">
+        <h2 class="section-title">DSA & Problem Solving</h2>
+        <p>
+          Logical thinking and algorithms form the backbone of clean engineering. I follow a structured learning roadmap to hone my debugging and architecture analysis skills.
+        </p>
+        <p>
+          By practicing consistently, I build optimized scripts and write memory-efficient algorithms. Currently focusing on arrays, strings, basic trees, and algorithmic paradigms.
+        </p>
+        <div class="dsa-points">
+          <div class="dsa-point"><i class="fa-solid fa-circle-check"></i> JavaScript Logic</div>
+          <div class="dsa-point"><i class="fa-solid fa-circle-check"></i> Roadmap Practice</div>
+          <div class="dsa-point"><i class="fa-solid fa-circle-check"></i> Analytical Mindset</div>
+          <div class="dsa-point"><i class="fa-solid fa-circle-check"></i> Active Problem Solving</div>
+        </div>
+      </div>
+      
+      <div class="dsa-tracker-card glass-panel reveal">
+        <div class="dsa-tracker-circle">
+          <div class="dsa-tracker-circle-content">
+            <div class="dsa-tracker-number">DSA</div>
+            <div class="dsa-tracker-label">Roadmap</div>
+          </div>
+        </div>
+        <h3>Consistency Tracker</h3>
+        <p style="color: var(--text-secondary); margin-top: 10px;">
+          Actively building logical reasoning and data structuring skills using JavaScript.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-info reveal">
+        <h2 class="section-title" style="text-align: left;">Let's Connect</h2>
+        <p class="contact-info-desc">
+          I am looking for a challenging position as a Full-Stack Developer or Laravel Intern where I can deliver value. Feel free to contact me for collaboration!
+        </p>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-detail-content">
+              <h4>Email</h4>
+              <p><a href="mailto:khushalmhajan303@gmail.com">khushalmhajan303@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-detail-content">
+              <h4>Location</h4>
+              <p>Nashik, Maharashtra, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-panel glass-panel reveal">
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Full Name</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address</label>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+            <label for="message" class="form-label">Your Message</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-submit" id="send-btn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <p id="form-status"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer
+  <footer class="footer-section">
+    <p class="footer-text">
+      &copy; 2026 <span class="footer-highlight">Khushal Mahajan</span>. Crafted with Passion. All Rights Reserved.
+    </p>
+  </footer> -->
+
+  <!-- Include EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
-  <section id="contact">
-  <h2>📩 Contact Me</h2>
-  <form id="contact-form">
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" id="send-btn">Send Message</button>
-  </form>
-  <p id="form-status"></p>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-  (function(){
-    emailjs.init("uBxfBAejxviA4yDMT");
-  })();
-
-  document.getElementById("contact-form")
-    .addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      emailjs.sendForm(
-        "service_gru41or",
-        "template_v7uzjmi",
-        this
-      ).then(
-        function() {
-          alert("Message sent successfully!");
-        },
-        function(error) {
-          alert("Failed to send message!");
-          console.log(error);
-        }
-      );
-    });
-</script>
-
 </body>
 </html>
