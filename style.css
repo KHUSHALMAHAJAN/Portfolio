@@ -1741,6 +1741,11 @@ textarea.form-input {
     gap: 40px;
     text-align: center;
   }
+
+  .character-3d-card {
+    width: 310px;
+    height: 310px;
+  }
   
   .hero-content {
     align-items: center;
@@ -1819,6 +1824,11 @@ textarea.form-input {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2.4rem;
+  }
+
+  .character-3d-card {
+    width: 270px;
+    height: 270px;
   }
   
   .hero-buttons {

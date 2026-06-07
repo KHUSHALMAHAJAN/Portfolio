@@ -395,8 +395,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (charCard && heroVisual && heroSection) {
     // 3D Tilt based on mouse movement anywhere in the Hero section
     heroSection.addEventListener("mousemove", (e) => {
-      // Don't tilt if scrolled past hero to avoid glitches
-      if (window.scrollY > 200) return;
+      // Don't tilt on mobile/tablets or if scrolled past hero to avoid glitches
+      if (window.innerWidth < 768 || window.scrollY > 200) return;
 
       const rect = charCard.getBoundingClientRect();
       const cardCenterX = rect.left + rect.width / 2;
