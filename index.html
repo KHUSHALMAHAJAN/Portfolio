@@ -27,6 +27,9 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-bar"></div>
+
   <!-- Smooth Neon Follower Cursor -->
   <div id="point"></div>
 
@@ -102,9 +105,32 @@
         </div>
       </div>
       
-      <div class="hero-visual reveal">
-        <div class="image-frame">
-          <img src="profile3.jpg" alt="Khushal Mahajan Portrait">
+      <div class="hero-visual reveal" id="hero-3d-visual">
+        <div class="character-3d-card" id="character-card">
+          <!-- Layer 1: Background Glow -->
+          <div class="char-layer layer-bg"></div>
+          
+          <!-- Layer 2: Holographic Code Grid -->
+          <div class="char-layer layer-code">
+            <div class="code-stream">&lt;code&gt;</div>
+            <div class="code-stream">const dev = new Coder();</div>
+            <div class="code-stream">dev.build();</div>
+          </div>
+          
+          <!-- Layer 3: Anime Boy Character Image -->
+          <div class="char-layer layer-avatar">
+            <img src="animeboy.jpg" alt="Anime Boy Coder" class="avatar-img">
+          </div>
+          
+          <!-- Layer 4: Glassmorphic Overlay Card Frame -->
+          <div class="char-layer layer-overlay">
+            <div class="overlay-code-tag">&lt;/&gt; WebDev</div>
+            <div class="overlay-particles">
+              <span class="p-dot"></span>
+              <span class="p-dot"></span>
+              <span class="p-dot"></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

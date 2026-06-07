@@ -384,4 +384,76 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initLanguages();
+
+  // ==========================================
+  // 10. 3D ANIME CHARACTER INTERACTIVE LOGIC
+  // ==========================================
+  const charCard = document.getElementById("character-card");
+  const heroVisual = document.getElementById("hero-3d-visual");
+  const heroSection = document.getElementById("hero");
+
+  if (charCard && heroVisual && heroSection) {
+    // 3D Tilt based on mouse movement anywhere in the Hero section
+    heroSection.addEventListener("mousemove", (e) => {
+      // Don't tilt if scrolled past hero to avoid glitches
+      if (window.scrollY > 200) return;
+
+      const rect = charCard.getBoundingClientRect();
+      const cardCenterX = rect.left + rect.width / 2;
+      const cardCenterY = rect.top + rect.height / 2;
+      
+      const offsetX = e.clientX - cardCenterX;
+      const offsetY = e.clientY - cardCenterY;
+      
+      // Normalize values by screen/half-viewport dimension to establish angle
+      const normX = offsetX / (window.innerWidth / 2);
+      const normY = offsetY / (window.innerHeight / 2);
+      
+      // Clamp norm values between -1 and 1 to prevent excessive rotation
+      const clampX = Math.min(Math.max(normX, -1), 1);
+      const clampY = Math.min(Math.max(normY, -1), 1);
+      
+      const angleX = -clampY * 20; // max 20 degrees
+      const angleY = clampX * 20;  // max 20 degrees
+      
+      charCard.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    });
+
+    // Reset rotation on Mouse Leave of the hero section
+    heroSection.addEventListener("mouseleave", () => {
+      charCard.style.transform = "rotateX(0deg) rotateY(0deg)";
+    });
+
+    // Scroll-Linked Parallax Slide-out & Fade-out (Disappears when scrolling down, returns when scrolling up)
+    window.addEventListener("scroll", () => {
+      const scrollVal = window.scrollY;
+      const fadePoint = 400; // scroll offset where it is fully hidden
+      
+      if (scrollVal <= fadePoint) {
+        const opacityVal = 1 - (scrollVal / fadePoint);
+        const translateVal = -scrollVal * 0.75; // slides upward out of view
+        const scaleVal = 1 - (scrollVal / (fadePoint * 3));
+        
+        heroVisual.style.opacity = opacityVal;
+        heroVisual.style.transform = `translateY(${translateVal}px) scale(${scaleVal})`;
+        heroVisual.style.pointerEvents = scrollVal > 150 ? "none" : "auto";
+      } else {
+        heroVisual.style.opacity = 0;
+        heroVisual.style.transform = `translateY(-${fadePoint * 0.75}px) scale(0.83)`;
+        heroVisual.style.pointerEvents = "none";
+      }
+    });
+  }
+
+  // Scroll Progress Bar Update
+  const scrollBar = document.getElementById("scroll-bar");
+  if (scrollBar) {
+    window.addEventListener("scroll", () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = (window.scrollY / totalHeight) * 100;
+        scrollBar.style.width = `${progress}%`;
+      }
+    });
+  }
 });
